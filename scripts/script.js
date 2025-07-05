@@ -1,12 +1,7 @@
-// import MY_API_KEY from api_key.js
 const form = document.querySelector("form");
 const userInput = document.querySelector("#city-name");
 const defaultLocation = "delhi";
-async function apiKey() {
-  const key = process.env.api_key;
-  return key;
-}
-const API_KEY = apiKey(); // ADD YOUR API KEY HERE
+const API_KEY = '245bc245eca4a3bb68767b3fd381ba06'; // ADD YOUR API KEY HERE
 const weatherTemp = document.querySelector(".weather-temp");
 const dateContainer = document.querySelector(".date-info");
 mainFunction();
