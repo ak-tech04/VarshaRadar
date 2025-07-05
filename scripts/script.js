@@ -3,8 +3,8 @@ const form = document.querySelector("form");
 const userInput = document.querySelector("#city-name");
 const defaultLocation = "delhi";
 async function apiKey() {
-  const api_key = process.env.api_key;
-  return api_key
+  const key = process.env.api_key;
+  return key;
 }
 const API_KEY = apiKey(); // ADD YOUR API KEY HERE
 const weatherTemp = document.querySelector(".weather-temp");
@@ -43,12 +43,12 @@ function mainFunction() {
   }
 }
 async function sucess(position) {
-  console.log('Accessing gps coodinates');
+  console.log("Accessing gps coodinates");
   const lat = position.coords.latitude;
   const lon = position.coords.longitude;
   const weatherData = await getWeatherData(lat, lon);
   displayData(weatherData, lat, lon);
-  console.log('storing gps coodinates in local storage');
+  console.log("storing gps coodinates in local storage");
   localStorage.setItem("userLocation", true);
   localStorage.setItem("lat", lat);
   localStorage.setItem("lon", lon);
@@ -68,7 +68,7 @@ async function error() {
   } else {
     // loading default location
 
-    console.log('loading default location');
+    console.log("loading default location");
     loadDefaultLocation();
   }
 }
@@ -87,7 +87,7 @@ async function loadDefaultLocation() {
   //  Load popup modal window alert showing default location
 }
 function displayData(weatherData, lat, lon) {
-  console.log('displayData called');
+  console.log("displayData called");
   const weatherNum = weatherData.mainTemp;
   const weatherDesc = weatherData.weatherDesc;
   const weatherIconId = weatherData.weatherIcon;
@@ -102,7 +102,7 @@ function displayData(weatherData, lat, lon) {
   updateMetricsData(weatherData);
 }
 async function displayLocation(lat, lon) {
-  console.log('displaylocation called');
+  console.log("displaylocation called");
   const limit = 1;
   try {
     const url = `http://api.openweathermap.org/geo/1.0/reverse?lat=${lat}&lon=${lon}&limit=${limit}&appid=${API_KEY}`;
@@ -195,7 +195,6 @@ async function getWeatherData(lat, lon) {
   // console.log(weatherObj);
 
   return weatherObj;
-
 }
 
 async function searchLocation(userLocation) {
