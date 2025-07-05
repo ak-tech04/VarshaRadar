@@ -199,6 +199,12 @@ form {
   main{
     flex-direction: column;
   }
+  .left-side{
+    height: 80vh;
+  }
+  .date-info{
+    margin-bottom: 5rem;
+  }
 
 }
 @media screen and (max-width: 800px){

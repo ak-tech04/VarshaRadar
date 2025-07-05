@@ -30,7 +30,11 @@ function mainFunction() {
 
   if ("geolocation" in navigator) {
     console.log("Geolocationn feature is present");
-    navigator.geolocation.getCurrentPosition(success, error);
+    navigator.geolocation.getCurrentPosition(success, error,{
+      enableHighAccuracy: true,
+      maximumAge: 10000,
+      timeout: 5000
+    });
   } else {
     console.log("Geoloaction not present");
     console.log("Loading Default location");
