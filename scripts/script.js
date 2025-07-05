@@ -2,7 +2,11 @@
 const form = document.querySelector("form");
 const userInput = document.querySelector("#city-name");
 const defaultLocation = "delhi";
-const API_KEY = process.env.api_key;
+async function apiKey() {
+  const api_key = process.env.api_key;
+  return api_key
+}
+const API_KEY = apiKey(); // ADD YOUR API KEY HERE
 const weatherTemp = document.querySelector(".weather-temp");
 const dateContainer = document.querySelector(".date-info");
 mainFunction();
