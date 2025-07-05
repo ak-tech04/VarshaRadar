@@ -51,6 +51,7 @@ async function sucess(position) {
 
 async function error() {
   console.log("User gps denied");
+  console.log(error);
   // Load previous location in local Storage
   if (localStorage.getItem("userLocation") === true) {
     console.log("Loading gps coods from local storage");
