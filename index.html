@@ -1,13 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Varsha Radar</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    
-</body>
-<script src="script.js"></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VarshaRadar</title>
+    <link rel="icon" type="image/x-icon" href="/img/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <div class="left-side">
+        <!-- search bar / img / temp / date / day / location or city name -->
+        <!-- SEARCH FORM -->
+        <form action="#">
+          <input
+            id="city-name"
+            name="search"
+            class="search-input"
+            type="text"
+            placeholder="Enter the city name"
+          />
+
+          <button class="submit-btn" type="submit">
+            <img
+              class="search-icon"
+              src="/img/search-icon.svg"
+              alt="search-icon"
+            />
+          </button>
+        </form>
+        <div class="weather-summary">
+          <div class="weather-img">
+            <img class="weather-icon" src="" alt="" srcset="" />
+            <!-- Add weather img -->
+          </div>
+          <div class="weather-temp">
+            <!-- weather temp / some text -->
+            <p class="weather-number"></p>
+            <p class="normal-text"></p>
+          </div>
+          <hr class="weather-focus" />
+
+          <div class="date-info">
+            <p class="normal-text currentDate"></p>
+            <p class="normal-text currentTime"></p>
+            <p class="normal-text currentDay"></p>
+          </div>
+
+          <div class="location-info">
+            <p class="normal-text current-location"></p>
+          </div>
+        </div>
+      </div>
+      <div class="right-side">
+        <div class="weather-data">
+          <div class="weather-template">
+            <p class="card__title">Wind Speed</p>
+            <p class="card__data data-wind"></p>
+          </div>
+          <div class="weather-template">
+            <p class="card__title">Humidity</p>
+            <p class="card__data data-humidity"></p>
+          </div>
+          <div class="weather-template">
+            <p class="card__title">Real Feal</p>
+            <p class="card__data data-realFeal"></p>
+          </div>
+          <div class="weather-template">
+            <p class="card__title">Pressure</p>
+            <p class="card__data data-pressure"></p>
+          </div>
+          <div class="weather-template">
+            <p class="card__title">Chances of Rain</p>
+            <p class="card__data data-rain"></p>
+          </div>
+          <div class="weather-template">
+            <p class="card__title">Temperature</p>
+            <p class="card__data data-tempMin"></p>
+            <p class="card__data data-tempMax"></p>
+          </div>
+        </div>
+        <div class="footer-text">
+          <div>
+            All Data Provided By
+            <a href="https://www.accuweather.com/">Accuweather</a>
+          </div>
+          <div>
+            Made by -
+            <a href="https://github.com/ak-tech04">Aditya Kumar Patel</a>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+  <script src="scripts.js/component.js"></script>
+  <script src="scripts.js/updateUI.js"></script>
+  <script src="scripts.js/script.js"></script>
 </html>
