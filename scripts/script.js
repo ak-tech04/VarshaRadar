@@ -1,9 +1,8 @@
-import MY_API_KEY from api_key.js
+// import MY_API_KEY from api_key.js
 const form = document.querySelector("form");
-
 const userInput = document.querySelector("#city-name");
 const defaultLocation = "delhi";
-const API_KEY = MY_API_KEY;
+const API_KEY = process.env.api_key;
 const weatherTemp = document.querySelector(".weather-temp");
 const dateContainer = document.querySelector(".date-info");
 mainFunction();
