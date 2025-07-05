@@ -100,7 +100,7 @@ async function displayLocation(lat, lon) {
   console.log("displaylocation called");
   const limit = 1;
   try {
-    const url = `http://api.openweathermap.org/geo/1.0/reverse?lat=${lat}&lon=${lon}&limit=${limit}&appid=${API_KEY}`;
+    const url = `https://api.openweathermap.org/geo/1.0/reverse?lat=${lat}&lon=${lon}&limit=${limit}&appid=${API_KEY}`;
     const res = await fetch(url);
     const data = await res.json();
     // console.log(data);
@@ -119,7 +119,7 @@ async function displayLocation(lat, lon) {
 async function getCoordinates(userLocation) {
   let city = userLocation;
   let limit = 1;
-  const url = `http://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=${limit}&appid=${API_KEY}`;
+  const url = `https://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=${limit}&appid=${API_KEY}`;
   //   let state = null;
   //   let country = null;
   try {
