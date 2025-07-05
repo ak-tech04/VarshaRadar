@@ -30,14 +30,14 @@ function mainFunction() {
 
   if ("geolocation" in navigator) {
     console.log("Geolocationn feature is present");
-    navigator.geolocation.getCurrentPosition(sucess, error);
+    navigator.geolocation.getCurrentPosition(success, error);
   } else {
     console.log("Geoloaction not present");
     console.log("Loading Default location");
     defaultLocation();
   }
 }
-async function sucess(position) {
+async function success(position) {
   console.log("Accessing gps coodinates");
   const lat = position.coords.latitude;
   const lon = position.coords.longitude;
@@ -49,9 +49,9 @@ async function sucess(position) {
   localStorage.setItem("lon", lon);
 }
 
-async function error() {
+async function error(error) {
   console.log("User gps denied");
-  console.log(error);
+  console.log(error.code, error.message);
   // Load previous location in local Storage
   if (localStorage.getItem("userLocation") === true) {
     console.log("Loading gps coods from local storage");
